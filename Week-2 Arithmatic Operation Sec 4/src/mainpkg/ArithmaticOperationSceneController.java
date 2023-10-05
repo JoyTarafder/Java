@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -22,6 +23,7 @@ public class ArithmaticOperationSceneController implements Initializable {
     @FXML    private Label resultLabel;
     @FXML    private TextField xTextField;
     @FXML    private TextField yTextField;
+    @FXML    private Button addButton;
 
     /**
      * Initializes the controller class.
@@ -33,33 +35,52 @@ public class ArithmaticOperationSceneController implements Initializable {
 
     @FXML
     private void addOnMouseClick(MouseEvent event) {
-        int xVal = Integer.parseInt(xTextField.getText());
-        int yVal= Integer.parseInt(yTextField.getText());
-        int sum = xVal + yVal;
+//        int xVal = Integer.parseInt(xTextField.getText());
+//        int yVal= Integer.parseInt(yTextField.getText());
+//        int sum = xVal + yVal;
         resultLabel.setText(
-                "X + Y : "+
-                Integer.toString(sum));
+                "X + Y : " +
+                Integer.toString(
+                        Integer.parseInt(xTextField.getText()) + 
+                        Integer.parseInt(yTextField.getText())
+                ));
         
     }
 
     @FXML
     private void subOnMouseClick(MouseEvent event) {
-        int xVal = Integer.parseInt(xTextField.getText());
-        int yVal= Integer.parseInt(yTextField.getText());
-        int sub = xVal - yVal;
+//        int xVal = Integer.parseInt(xTextField.getText());
+//        int yVal= Integer.parseInt(yTextField.getText());
+//        int sub = xVal - yVal;
         resultLabel.setText(
-                "X - Y : "+
-                Integer.toString(sub));
+                "X - Y : " +
+                Integer.toString(
+                        Integer.parseInt(xTextField.getText()) - 
+                        Integer.parseInt(yTextField.getText())
+                ));
     }
 
     @FXML
     private void multOnMouseClick(MouseEvent event) {
-        int xVal = Integer.parseInt(xTextField.getText());
-        int yVal= Integer.parseInt(yTextField.getText());
-        int mult = xVal * yVal;
+//        int xVal = Integer.parseInt(xTextField.getText());
+//        int yVal= Integer.parseInt(yTextField.getText());
+//        int mult = xVal * yVal;
         resultLabel.setText(
-                "X * Y : "+
-                Integer.toString(mult));
+                "X * Y : " +
+                Integer.toString(
+                        Integer.parseInt(xTextField.getText()) * 
+                        Integer.parseInt(yTextField.getText())
+                ));
+    }
+
+    @FXML
+    private void addMouseExited(MouseEvent event) {
+         addButton.setText("Add");
+    }
+
+    @FXML
+    private void addMouseEntered(MouseEvent event) {
+        addButton.setText("Don't Hover");
     }
     
 }
