@@ -15,10 +15,10 @@ public class Student {
     protected String name;
     protected float cgpa;
     protected LocalDate dob;
-    //private int id;
-    //private String name;
-    //private float cgpa;
-    //private LocalDate dob;
+    // private int id;
+    // private String name;
+    // private float cgpa;
+    // private LocalDate dob;
 
     public Student() {
     }
@@ -64,7 +64,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", cgpa=" + cgpa + ", dob=" + dob + '}'+'\n';
+        return "Student{" + "id=" + id + ", name=" + name + ", cgpa=" + cgpa + ", dob=" + dob + '\n';
     }
-    
+
 }
