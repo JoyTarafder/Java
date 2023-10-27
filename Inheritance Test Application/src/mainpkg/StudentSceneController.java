@@ -86,15 +86,34 @@ public class StudentSceneController implements Initializable {
 
     @FXML
     private void showStudentInfoButtonOnClicked(ActionEvent event) {
-        String str="List of UG Students:\n";
-        for(Student s: studentList){
-            str  += s.toString();
+        
+        if (gradStudentList == null) {
+            String str = "List of UG Students:\n";
+            for (Student s : studentList) {
+                str += s.toString();
+            }
+            outputLabel.setText(str);
+        } 
+        else if (studentList == null) {
+            String str = "\nList of Graduate Students:\n";
+            for (Student s : gradStudentList) {
+                str += s.toString();
+            }
+            outputLabel.setText(str);
         }
-        str += "\nList of Graduate Students:\n";
-        for(Student s: gradStudentList){
-            str  += s.toString();
-        }  
-        outputLabel.setText(str);
+        else{
+
+
+            String str="List of UG Students:\n";
+            for(Student s: studentList){
+                str  += s.toString();
+            }
+            str += "\nList of Graduate Students:\n";
+            for(Student s: gradStudentList){
+                str  += s.toString();
+            }  
+            outputLabel.setText(str);
+        }
     }
 
     @FXML
