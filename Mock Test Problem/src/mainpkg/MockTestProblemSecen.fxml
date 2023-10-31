@@ -5,12 +5,13 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="652.0" prefWidth="858.0" style="-fx-background-color: #F2F7A1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MockTestProblemSecenController">
+<AnchorPane id="AnchorPane" prefHeight="652.0" prefWidth="858.0" style="-fx-background-color: #98E4FF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.MockTestProblemSecenController">
    <children>
       <Label layoutX="46.0" layoutY="51.0" text="ID?">
          <font>
@@ -65,29 +66,19 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <ComboBox fx:id="designationComboBox" layoutX="437.0" layoutY="43.0" prefWidth="150.0" />
-      <ComboBox fx:id="departmentComboBox" layoutX="437.0" layoutY="80.0" prefWidth="150.0" />
-      <DatePicker fx:id="dobDatePicker" layoutX="439.0" layoutY="122.0" prefHeight="31.0" prefWidth="150.0" />
-      <DatePicker fx:id="dojDatePicker" layoutX="439.0" layoutY="159.0" prefHeight="31.0" prefWidth="150.0" />
+      <ComboBox fx:id="designationComboBox" layoutX="437.0" layoutY="43.0" prefHeight="31.0" prefWidth="202.0" />
+      <ComboBox fx:id="departmentComboBox" layoutX="437.0" layoutY="80.0" prefHeight="31.0" prefWidth="202.0" />
+      <DatePicker fx:id="dobDatePicker" layoutX="439.0" layoutY="122.0" prefHeight="31.0" prefWidth="202.0" />
+      <DatePicker fx:id="dojDatePicker" layoutX="439.0" layoutY="159.0" prefHeight="31.0" prefWidth="202.0" />
       <Button layoutX="672.0" layoutY="36.0" mnemonicParsing="false" onAction="#addNewEmployeeButtonOnAction" prefHeight="153.0" prefWidth="150.0" text="Add New Employee to ArrayList and show all of them in TextArea" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Line endX="729.0" layoutX="117.0" layoutY="210.0" startX="-100.0" strokeWidth="5.0" />
-      <Line endX="6.0" endY="1.0" layoutX="620.0" layoutY="205.0" startX="6.0" startY="-177.0" strokeWidth="5.0" />
-      <Label fx:id="showEmployeeDataTextArea" layoutX="40.0" layoutY="255.0" prefHeight="183.0" prefWidth="783.0" style="-fx-background-color: #98E4FF;">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
+      <Line endX="6.0" endY="1.0" layoutX="647.0" layoutY="205.0" startX="6.0" startY="-177.0" strokeWidth="5.0" />
       <Line endX="729.0" layoutX="111.0" layoutY="465.0" startX="-100.0" strokeWidth="5.0" />
-      <Line endX="6.0" endY="1.0" layoutX="404.0" layoutY="643.0" startX="6.0" startY="-177.0" strokeWidth="5.0" />
-      <Label fx:id="showAverageSalaryTextArea" layoutX="435.0" layoutY="479.0" prefHeight="153.0" prefWidth="386.0" style="-fx-background-color: #98E4FF;">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
+      <Line endX="6.0" endY="1.0" layoutX="438.0" layoutY="643.0" startX="6.0" startY="-177.0" strokeWidth="5.0" />
       <Label layoutX="20.0" layoutY="479.0" text="Select Search Department">
          <font>
             <Font name="System Bold" size="15.0" />
@@ -98,15 +89,15 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <ComboBox fx:id="searchDepartmentComboBox" layoutX="217.0" layoutY="474.0" prefHeight="31.0" prefWidth="159.0" />
-      <TextField fx:id="lowerSalaryBoundTextField" layoutX="216.0" layoutY="509.0" prefHeight="31.0" prefWidth="159.0" />
-      <TextField fx:id="upperSalaryBoundTextField" layoutX="216.0" layoutY="545.0" prefHeight="31.0" prefWidth="159.0" />
-      <Button layoutX="20.0" layoutY="591.0" mnemonicParsing="false" onAction="#showAverageSalaryButtonOnAction" prefHeight="41.0" prefWidth="355.0" text="Show average salary employees meeting search ">
+      <ComboBox fx:id="searchDepartmentComboBox" layoutX="217.0" layoutY="474.0" prefHeight="31.0" prefWidth="191.0" />
+      <TextField fx:id="lowerSalaryBoundTextField" layoutX="216.0" layoutY="509.0" prefHeight="31.0" prefWidth="190.0" />
+      <TextField fx:id="upperSalaryBoundTextField" layoutX="216.0" layoutY="545.0" prefHeight="31.0" prefWidth="187.0" />
+      <Button layoutX="20.0" layoutY="591.0" mnemonicParsing="false" onAction="#showAverageSalaryButtonOnAction" prefHeight="41.0" prefWidth="381.0" text="Show average salary employees meeting search ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="46.0" layoutY="226.0" text="After addition, There are total 0 employee as shown below :">
+      <Label fx:id="totalEmployeeLabel" layoutX="46.0" layoutY="226.0" text="After addition, There are total 0 employee as shown below :">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -116,5 +107,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
+      <TextArea fx:id="showEmployeeDataTextArea" editable="false" layoutX="46.0" layoutY="247.0" prefHeight="200.0" prefWidth="776.0" style="-fx-background-color: #98E4FF;" />
+      <TextArea fx:id="showAverageSalaryTextArea" editable="false" layoutX="481.0" layoutY="484.0" prefHeight="153.0" prefWidth="339.0" style="-fx-background-color: #98E4FF;" />
    </children>
 </AnchorPane>
