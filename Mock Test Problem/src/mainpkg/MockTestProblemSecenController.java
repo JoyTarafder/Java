@@ -92,7 +92,6 @@ public class MockTestProblemSecenController implements Initializable {
         
         Employee e = new Employee(
                 Integer.parseInt(idTextField.getText()),
-                
                 nameTextField.getText(),
                 (maleRadioButton.isSelected() ? "Male" : "Female"),
                 departmentComboBox.getValue(),
@@ -104,7 +103,7 @@ public class MockTestProblemSecenController implements Initializable {
         
         emList.add(e);
         totalEmployeeLabel.setText("After addition, There are total " + emList.size() +" employee as shown below :");
-        showEmployeeDataTextArea.setText(e.toString());
+        showEmployeeDataTextArea.appendText(e.toString());
         
         idTextField.clear(); nameTextField.clear(); salaryTextField.clear();
         departmentComboBox.setValue("Select a department");
