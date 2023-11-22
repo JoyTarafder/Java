@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.AddCustomerController">
+   <children>
+      <Label layoutX="235.0" layoutY="46.0" text="Add customer">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CIDTextField" layoutX="57.0" layoutY="118.0" promptText="Customer ID?" />
+      <TextField fx:id="nameTextField" layoutX="351.0" layoutY="118.0" promptText="Customer Name?" />
+      <TextField fx:id="contactTextField" layoutX="57.0" layoutY="185.0" promptText="Customer Number?" />
+      <TextField fx:id="addressTextField" layoutX="351.0" layoutY="185.0" promptText="Customer Address?" />
+      <Button layoutX="227.0" layoutY="246.0" mnemonicParsing="false" onAction="#addNewOnClick" text="Add new Customer" />
+      <Button layoutX="420.0" layoutY="332.0" mnemonicParsing="false" onAction="#viewListOnClick" text="View Customer List" />
+   </children>
+</AnchorPane>
